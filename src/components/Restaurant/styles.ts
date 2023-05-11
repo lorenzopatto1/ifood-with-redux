@@ -1,56 +1,108 @@
-import { styled } from 'styled-components';
+import styled from "styled-components";
 
-export const RestaurantOptionContainer = styled.button`
-  width: 262px;
-  height: 112px;
-  padding: 20px;
-  border: 1px solid rgb(242, 242, 242);
-  border-radius: 6%;
-  transition: all 0.2s linear 0s;
-  
-  &:hover {
-    width: 264px;
-    height: 114px;
-    box-shadow: 0px 0px 8px #dcdcdc;
-    img {
-      width: 73px;
-      height: 73px;
-    }
-  }
-  `
-
-export const RestaurantInfo = styled.div`
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  `
-export const Logo = styled.div`
-  img {
-    width: 71px;
-    height: 71px;
-    transition: all 0.2s linear 0s;
-  }
-  `
 export const Container = styled.div`
-  
-`
+  display: flex;
+  flex-direction: column;
+  padding: 23px 46px 23px 30px;
+`;
+
 
 export const Banner = styled.div`
-`
+  width: 100%;
+
+  > img {
+    width: 100%;
+    filter: brightness(0.8);
+    border-radius: 4px;
+  }
+`;
 export const HeaderMerchant = styled.div`
-`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 30px 0 20px;
+  flex: 1 1;
+
+  > img {
+    width: 75px;
+    height:75px;
+    margin: 0 30px;
+  }
+`;
 export const MerchantContent = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  flex: 1 1;
 
-  span {
-    position: relative;
-    /* top: 0; */
-    /* z-index: 0; */
+  > h1 {
+    font-weight: 400;
+    letter-spacing: -1px;
+
+    line-height: 44px;
+    color: #3e3e3e;
   }
-  svg {
+  #verify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+export const VerifyIcon = styled.div`
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-left: 24px;
+  margin-right: 30px;
+
+  > svg {
     position: absolute;
-    top: 10;
-    left: 0;
-    /* z-index: -1; */
   }
+`;
+export const RateContainer = styled.div`
+  font-weight: bold;
+  color: #fcbb00;
+  fill: #fcbb00;
+`;
 
+export const MerchantDetailsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: unset;
+`
+export const MoreButton = styled.button`
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #ea1d2c;
+`
+
+export const MinimumOrder = styled.div`
+display: flex;
+  align-items: center;
+  border-left: 1px solid #a6a6a5;
+  margin-left: 20px;
+  padding-left: 20px;
+  font-size: 12px;
+  `
+export const DollarSign = styled.div`
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #a6a6a5;
+`
+export const Separation = styled.div`
+  margin-top: 30px;
+  width: 100vw;
+  height: 60px;
+  background-color: #f2f2f2;
 `

@@ -1,19 +1,17 @@
 import { navItems } from '../../data/navItems';
+import { SearchZone } from '../SearchZone';
 
 import {
   Container,
   LogoContainer,
   Logo,
   NavBar,
-  SearchZone,
-  SearchIcon,
   Address,
   Cart,
 } from "./styles";
 import {
   CaretDown,
   HandbagSimple,
-  MagnifyingGlass,
   SignIn,
 } from "@phosphor-icons/react";
 
@@ -39,14 +37,7 @@ export const Header = () => {
         {navItems.map(item => <li><a>{item}</a></li>)}
         </ul>
       </NavBar>
-      <SearchZone>
-        <SearchIcon>
-          <MagnifyingGlass size={24} fill="#ea1d2c" />
-        </SearchIcon>
-        <form>
-          <input type="text" placeholder="Busque por um item ou loja" />
-        </form>
-      </SearchZone>
+      <SearchZone placeholder="Busque por um item ou loja" />
       <Address>
         <span>Av. Taquaritinga, 367</span>
         <CaretDown size={16} fill="#ea1d2c" weight="bold" />

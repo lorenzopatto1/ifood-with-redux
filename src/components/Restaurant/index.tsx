@@ -1,35 +1,22 @@
-import { useState } from "react";
-import { restaurant } from "../../data/restaurant";
-
 import {
-  RestaurantOptionContainer,
-  Logo,
-  RestaurantInfo,
   Container,
   Banner,
   HeaderMerchant,
   MerchantContent,
+  VerifyIcon,
+  RateContainer,
+  MerchantDetailsContainer,
+  MoreButton,
+  MinimumOrder,
+  DollarSign,
+  Separation
 } from "./styles.ts";
 import { Seal, Star } from "@phosphor-icons/react";
+import { SearchZone } from "../SearchZone/index.tsx";
+import { Products } from "../Product/index.tsx";
+import { restaurant } from "../../data/restaurant.ts";
 
 export const Restaurant = () => {
-  const [restaurantIsSelected, setRestaurantIsSelected] = useState(false);
-
-  if (!restaurantIsSelected) {
-    return (
-      <RestaurantOptionContainer onClick={() => setRestaurantIsSelected(true)}>
-        <RestaurantInfo>
-          <Logo>
-            <img src={restaurant.imgURL} alt={restaurant.name} />
-          </Logo>
-          <p>
-            {restaurant.name} - {restaurant.location}
-          </p>
-        </RestaurantInfo>
-      </RestaurantOptionContainer>
-    );
-  }
-
   return (
     <Container>
       <Banner>
@@ -38,16 +25,41 @@ export const Restaurant = () => {
       <HeaderMerchant>
         <img src={restaurant.imgURL} />
         <MerchantContent>
-          <p>
+          <h1>
             {restaurant.name} - {restaurant.location}
-          </p>
-          <span>
-            <Seal className="Seal" size={32} weight="fill" fill="#ea1d2c"/>
-            
-            <Star className="Star" size={15} weight="fill" fill="#000" />
+          </h1>
+          <span id="verify">
+            <VerifyIcon>
+              <Seal
+                className="verifySeal"
+                size={28}
+                weight="fill"
+                fill="#ea1d2c"
+              />
+              <Star
+                className="verifyStar"
+                size={12}
+                weight="fill"
+                fill="#fff"
+              />
+            </VerifyIcon>
+            <RateContainer>
+              <Star className="Star" size={15} weight="fill" />
+              <span>{restaurant.rating}</span>
+            </RateContainer>
           </span>
         </MerchantContent>
+        <MerchantDetailsContainer>
+          <MoreButton>Ver mais</MoreButton>
+          <MinimumOrder>
+            <DollarSign>$</DollarSign>
+            Pedido mínimo R$ {restaurant.minimumOrder},00
+          </MinimumOrder>
+        </MerchantDetailsContainer>
       </HeaderMerchant>
+      <SearchZone placeholder="Buscar no cardápio"/>
+      <Separation />
+      <Products />
     </Container>
   );
-};
+}
