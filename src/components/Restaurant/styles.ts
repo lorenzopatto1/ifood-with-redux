@@ -8,6 +8,7 @@ export const Container = styled.div`
 
 
 export const Banner = styled.div`
+  margin-top: 12px;
   width: 100%;
 
   > img {
@@ -105,4 +106,10 @@ export const Separation = styled.div`
   width: 100vw;
   height: 60px;
   background-color: #f2f2f2;
+`
+export const Products = styled.ul`
+   display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 20px 0;
+  grid-gap: 30px;
 `

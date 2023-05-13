@@ -1,5 +1,7 @@
 import { navItems } from '../../data/navItems';
+import { CartZone } from '../CartZone';
 import { SearchZone } from '../SearchZone';
+import { useState } from 'react';
 
 import {
   Container,
@@ -16,7 +18,14 @@ import {
 } from "@phosphor-icons/react";
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleDrawer = () => {
+    setIsOpen((prevState) => !prevState)
+}
+
   return (
+    <>
     <Container>
       <LogoContainer>
         <Logo viewBox="0 0 1004 530.58">
@@ -46,7 +55,7 @@ export const Header = () => {
         <a>
           <SignIn size={22} fill="#ea1d2c" />
         </a>
-        <button>
+        <button onClick={toggleDrawer}>
           <HandbagSimple size={22} fill="#ea1d2c" />
           <div>
             <span>R$ 0,00</span>
@@ -55,5 +64,7 @@ export const Header = () => {
         </button>
       </Cart>
     </Container>
+    <CartZone cartIsOpen={isOpen} toggleDrawer={toggleDrawer} />
+    </>
   );
 };

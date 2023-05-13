@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.header`
   max-width: 100vw;
@@ -15,7 +15,7 @@ export const Container = styled.header`
   border-bottom: 1px solid #dcdcdc;
 
   font-size: 0.842em;
-  `;
+`;
 
 export const LogoContainer = styled.div`
   display: flex;
@@ -23,11 +23,11 @@ export const LogoContainer = styled.div`
   width: 62px;
   height: 46px;
   cursor: pointer;
-`
+`;
 export const Logo = styled.svg`
-width: 52px;
-height: 40px;
-`
+  width: 52px;
+  height: 40px;
+`;
 export const NavBar = styled.nav`
   display: flex;
   align-items: center;
@@ -40,13 +40,12 @@ export const NavBar = styled.nav`
   li:hover {
     color: #ea1d2c;
     cursor: pointer;
-    
   }
 
   ul > li:first-child {
     margin-left: 0;
   }
-`
+`;
 
 export const Address = styled.div`
   display: flex;
@@ -54,7 +53,7 @@ export const Address = styled.div`
   gap: 8px;
   font-weight: bold;
   white-space: nowrap;
-`
+`;
 export const Cart = styled.div`
   display: flex;
   align-items: center;
@@ -76,8 +75,8 @@ export const Cart = styled.div`
     display: flex;
     flex-direction: column;
     margin-left: 6px;
-    font-size: .78em;
+    font-size: 0.78em;
     color: #717171;
     white-space: nowrap;
   }
-`
+`;

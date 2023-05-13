@@ -4,6 +4,7 @@ export interface ProductInfos {
   description: string;
   imgURL: string;
   price: number;
+  quantity?: number
 }
 
 export const products: Array<ProductInfos> = [

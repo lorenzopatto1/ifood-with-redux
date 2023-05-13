@@ -8,6 +8,7 @@ export default createGlobalStyle`
   }
 
   body {
+    max-width: 100vw;
     font-size: 16px;
     color: #717171;
     font-family: helvetica, sans-serif;
@@ -17,6 +18,8 @@ export default createGlobalStyle`
     background: transparent;
     border-color: transparent;
     cursor: pointer;
+    outline: none;
+
   }
 
   ul {

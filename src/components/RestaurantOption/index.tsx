@@ -1,15 +1,15 @@
 import { restaurant } from "../../data/restaurant.ts";
-import { useState } from "react";
 
 import { RestaurantButton, Logo, RestaurantInfo, Container } from "./styles.ts";
-import { Restaurant } from "../Restaurant/index.tsx";
 
-export const RestaurantOption = () => {
-  const [restaurantIsSelected, setRestaurantIsSelected] = useState(false);
-  if (!restaurantIsSelected) {
+interface RestaurantOptionProps {
+  handleRestaurantClick: () => void;
+}
+
+export const RestaurantOption = ({handleRestaurantClick}: RestaurantOptionProps) => {
     return (
       <Container>
-        <RestaurantButton onClick={() => setRestaurantIsSelected(true)}>
+        <RestaurantButton onClick={handleRestaurantClick}>
           <RestaurantInfo>
             <Logo>
               <img src={restaurant.imgURL} alt={restaurant.name} />
@@ -21,6 +21,4 @@ export const RestaurantOption = () => {
         </RestaurantButton>
       </Container>
     );
-  }
-  return <Restaurant />;
 };

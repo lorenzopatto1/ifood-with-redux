@@ -1,13 +1,6 @@
 import { styled } from "styled-components";
 
-export const Container = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  padding: 20px 0;
-  grid-gap: 30px;
-`;
-
-export const ProductItem = styled.li`
+export const Container = styled.li`
   display: flex;
   justify-content: space-between;
   min-height: 147px;

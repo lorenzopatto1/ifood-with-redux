@@ -9,11 +9,12 @@ import {
   MoreButton,
   MinimumOrder,
   DollarSign,
-  Separation
+  Separation,
+  Products
 } from "./styles.ts";
 import { Seal, Star } from "@phosphor-icons/react";
 import { SearchZone } from "../SearchZone/index.tsx";
-import { Products } from "../Product/index.tsx";
+import { Product } from "../Product/index.tsx";
 import { restaurant } from "../../data/restaurant.ts";
 
 export const Restaurant = () => {
@@ -59,7 +60,9 @@ export const Restaurant = () => {
       </HeaderMerchant>
       <SearchZone placeholder="Buscar no cardápio"/>
       <Separation />
-      <Products />
+     <Products>
+      {restaurant.products.map((product) => (<Product key={product.id} product={product} />))}
+     </Products>
     </Container>
   );
 }
