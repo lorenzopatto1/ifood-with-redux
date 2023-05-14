@@ -17,10 +17,6 @@ import {
   HandbagSimple,
   SignIn,
 } from "@phosphor-icons/react";
-<<<<<<< HEAD
-=======
-import { ApplicationState } from '../../redux/store';
->>>>>>> 91d30f9005d7fb8b7a35b608f1f58eddf644a86e
 import { selectProductsCount, selectProductsTotalPrice } from '../../redux/Cart/cartSelectors';
 
 export const Header = () => {
