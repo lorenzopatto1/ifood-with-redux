@@ -6,6 +6,7 @@ export const ProductItem = styled.div`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #dcdcdc;
+  user-select: none;
 
   > img {
     width: 30%;

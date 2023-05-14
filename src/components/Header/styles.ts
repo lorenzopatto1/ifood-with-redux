@@ -62,12 +62,19 @@ export const Cart = styled.div`
   button {
     display: flex;
     align-items: center;
-    height: 50px;
-    padding: 8px 12px;
+    height: 45px;
+    padding: 8px 20px;
     border: 0;
-    border-radius: 40%;
+    border-radius: 200px;
 
-    &:hover {
+    &.Active {
+      background-color: #ea1d2c;
+
+      > div span {
+        color: #f7f7f7;
+      }
+    }
+    &:hover:not(.Active) {
       background-color: #f7f7f7;
     }
   }

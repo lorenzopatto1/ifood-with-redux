@@ -2,6 +2,7 @@ import { navItems } from '../../data/navItems';
 import { CartZone } from '../CartZone';
 import { SearchZone } from '../SearchZone';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import {
   Container,
@@ -16,9 +17,13 @@ import {
   HandbagSimple,
   SignIn,
 } from "@phosphor-icons/react";
+import { ApplicationState } from '../../redux/store';
+import { selectProductsCount, selectProductsTotalPrice } from '../../redux/Cart/cartSelectors';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const productsCount = useSelector(selectProductsCount)
+  const productsTotalPrice = useSelector(selectProductsTotalPrice)
 
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState)
@@ -55,11 +60,11 @@ export const Header = () => {
         <a>
           <SignIn size={22} fill="#ea1d2c" />
         </a>
-        <button onClick={toggleDrawer}>
-          <HandbagSimple size={22} fill="#ea1d2c" />
+        <button className={productsCount > 0 ? 'Active' : ''} onClick={toggleDrawer}>
+          <HandbagSimple size={22} fill={productsCount > 0 ? "#f7f7f7" : "#ea1d2c"} />
           <div>
-            <span>R$ 0,00</span>
-            <span>0 itens</span>
+            <span>R$ {productsTotalPrice.toFixed(2)}</span>
+            <span>{productsCount} itens</span>
           </div>
         </button>
       </Cart>
