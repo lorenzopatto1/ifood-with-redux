@@ -13,8 +13,11 @@ export const Container = styled.header`
   grid-column-gap: 24px;
   background-color: #ffffff;
   border-bottom: 1px solid #dcdcdc;
-
+  
   font-size: 0.842em;
+  @media (max-width: 1330px) {
+    justify-content: space-between;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -32,6 +35,10 @@ export const NavBar = styled.nav`
   display: flex;
   align-items: center;
   line-height: 16px;
+
+  @media (max-width: 1330px) {
+    display: none
+  }
 
   li {
     margin-left: 16px;

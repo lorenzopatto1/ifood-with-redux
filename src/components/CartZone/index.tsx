@@ -24,6 +24,7 @@ export const CartZone = ({ cartIsOpen, toggleDrawer }: CartZoneProps) => {
       onClose={toggleDrawer}
       direction="right"
       overlayOpacity={0}
+      size={'36vw'}
     >
       <Container>
         <X onClick={toggleDrawer} size={17.5} weight="bold" fill="#ea1d2c" />

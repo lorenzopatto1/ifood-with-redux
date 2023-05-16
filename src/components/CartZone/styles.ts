@@ -1,5 +1,22 @@
 import { styled } from "styled-components";
 
+export const Drawer = styled.div`
+  position: fixed;
+  right: 0;
+  top: 80px;
+  width: 36vw;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5 linear;
+  overflow-y: auto;
+  > svg {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+  }
+`;
 export const Container = styled.div`
   position: fixed;
   right: 0;

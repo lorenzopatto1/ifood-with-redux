@@ -8,7 +8,7 @@ export default createGlobalStyle`
   }
 
   body {
-    max-width: 100vw;
+    max-width: 100%;
     font-size: 16px;
     color: #717171;
     font-family: helvetica, sans-serif;

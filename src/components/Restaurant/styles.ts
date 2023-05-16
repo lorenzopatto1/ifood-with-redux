@@ -108,8 +108,13 @@ export const Separation = styled.div`
   background-color: #f2f2f2;
 `
 export const Products = styled.ul`
-   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  display: grid;
+  grid-template-columns: repeat(2,minmax(320px,1fr));
   padding: 20px 0;
   grid-gap: 30px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
