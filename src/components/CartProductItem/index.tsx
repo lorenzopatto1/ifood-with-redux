@@ -22,7 +22,7 @@ export const CartProductItem = ({ product }: ProductProps) => {
     <ProductItem>
       <ProductInfos>
         <span>{product.name}</span>
-        <span>{product.price}</span>
+        <span>R$ {product.price * product.quantity!}</span>
         <ProductQuantity>
           <Minus size={18} weight="bold" fill="#ea1d2c" onClick={handleDecreaseItem} />
           <span>{product.quantity}</span>

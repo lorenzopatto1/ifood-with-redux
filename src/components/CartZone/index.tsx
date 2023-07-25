@@ -1,12 +1,18 @@
 import { Bag, X } from "@phosphor-icons/react";
 import { useSelector } from "react-redux";
-import { CartEmptyInfos, CartEmptySVG, Container } from "./styles";
+import {
+  CartEmptyInfos, CartEmptySVG, Container,
+  Content,
+  ProductsTotalPriceContainer,
+  Total
+} from "./styles";
 
 import Drawer from "react-modern-drawer";
 
 import "react-modern-drawer/dist/index.css";
 import { ApplicationState } from "../../redux/store";
 import { CartProductItem } from "../CartProductItem";
+import { selectProductsTotalPrice } from "../../redux/Cart/cartSelectors";
 
 interface CartZoneProps {
   cartIsOpen: boolean;
@@ -17,6 +23,7 @@ export const CartZone = ({ cartIsOpen, toggleDrawer }: CartZoneProps) => {
   const { products } = useSelector(
     (rootReducer: ApplicationState) => rootReducer.cartReducer
   );
+  const productsTotalPrice = useSelector(selectProductsTotalPrice)
 
   return (
     <Drawer
@@ -39,6 +46,17 @@ export const CartZone = ({ cartIsOpen, toggleDrawer }: CartZoneProps) => {
             <span>Adicione itens</span>
           </CartEmptyInfos>
         )}
+     {products.length > 0 && (
+       <ProductsTotalPriceContainer>
+       <Content>
+         <Total>
+           <span>Total</span>
+           <span>R$ {productsTotalPrice}</span>
+         </Total>
+         <button>Escolher forma de pagamento</button>
+       </Content>
+     </ProductsTotalPriceContainer>
+     )}
       </Container>
     </Drawer>
   );
