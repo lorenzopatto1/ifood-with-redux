@@ -5,6 +5,7 @@ export const ProductItem = styled.div`
   margin: 10% 14%;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 4%;
   border-bottom: 1px solid #dcdcdc;
   user-select: none;
 
@@ -17,6 +18,14 @@ export const ProductInfos = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  > span {
+    font-weight: bold;
+  }
+  
+  > span:nth-child(2) {
+    color: #000;
+  }
 `;
 export const ProductQuantity = styled.div`
   display: flex;
