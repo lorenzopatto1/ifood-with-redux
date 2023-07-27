@@ -1,38 +1,48 @@
 import { styled } from "styled-components";
 
-export const Drawer = styled.div`
-  position: fixed;
-  right: 0;
-  top: 80px;
-  width: 36vw;
-  height: 100vh;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.5 linear;
-  overflow-y: auto;
-  > svg {
-    cursor: pointer;
-    position: absolute;
-    top: 8px;
-    left: 20px;
-  }
+export const Drawer = styled.div.attrs(props => ({
+  className: props.className,
+}))`
+    &.DrawerContainer {
+      width: 100vw;
+      
+      @media (min-width: 1030px) {
+        position: fixed;
+        right: 0;
+        top: 80px;
+        /* width: 36vw; */
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.5 linear;
+        overflow-y: auto;
+        > svg {
+          cursor: pointer;
+          position: absolute;
+          top: 8px;
+          left: 20px;
+        } 
+      }
+    }
+
 `;
 export const Container = styled.div`
-  position: fixed;
-  right: 0;
-  top: 80px;
-  width: 36vw;
-  height: 92vh;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.5 linear;
-  overflow-y: auto;
-  > svg {
-    cursor: pointer;
-    position: absolute;
-    top: 8px;
-    left: 20px;
-  }
+    position: fixed;
+    right: 0;
+    padding: 10px 20px;
+    top: 80px;
+    width: 100%;
+    height: 92vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5 linear;
+    overflow-y: auto;
+    > svg {
+      cursor: pointer;
+      position: absolute;
+      top: 8px;
+      left: 20px;
+    }
 `;
 export const CartEmptyInfos = styled.div`
   width: 100%;
@@ -81,6 +91,10 @@ export const Content = styled.div`
 
     &:hover {
       opacity: 0.8;
+    }
+
+    @media (max-width: 1001px) {
+      font-size: 0.8rem;
     }
   }
 `

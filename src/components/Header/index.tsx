@@ -11,6 +11,7 @@ import {
   NavBar,
   Address,
   Cart,
+  CartInfos
 } from "./styles";
 import {
   CaretDown,
@@ -61,10 +62,10 @@ export const Header = () => {
         </a>
         <button className={productsCount > 0 ? 'Active' : ''} onClick={toggleDrawer}>
           <HandbagSimple size={22} fill={productsCount > 0 ? "#f7f7f7" : "#ea1d2c"} />
-          <div>
+          <CartInfos>
             <span>R$ {productsTotalPrice.toFixed(2)}</span>
             <span>{productsCount} itens</span>
-          </div>
+          </CartInfos>
         </button>
       </Cart>
     </Container>

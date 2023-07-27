@@ -1,13 +1,20 @@
 import { styled } from "styled-components";
 
 export const ProductItem = styled.div`
-  height: 20%;
   margin: 10% 14%;
   display: flex;
-  justify-content: space-between;
   padding-bottom: 4%;
+  justify-content: space-between;
   border-bottom: 1px solid #dcdcdc;
   user-select: none;
+
+  @media (max-width: 1000px) {
+    justify-content: center;
+
+    img {
+      display: none;
+    }
+  }
 
   > img {
     width: 30%;
@@ -17,7 +24,7 @@ export const ProductItem = styled.div`
 export const ProductInfos = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 20px;
 
   > span {
     font-weight: bold;
