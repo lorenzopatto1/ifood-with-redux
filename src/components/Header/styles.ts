@@ -60,6 +60,10 @@ export const Address = styled.div`
   gap: 8px;
   font-weight: bold;
   white-space: nowrap;
+
+  @media (max-width: 500px) {
+    display: none
+  }
 `;
 export const Cart = styled.div`
   display: flex;
@@ -85,12 +89,17 @@ export const Cart = styled.div`
       background-color: #f7f7f7;
     }
   }
-  div {
-    display: flex;
-    flex-direction: column;
-    margin-left: 6px;
-    font-size: 0.78em;
-    color: #717171;
-    white-space: nowrap;
-  }
 `;
+
+export const CartInfos = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 6px;
+  font-size: 0.78em;
+  color: #717171;
+  white-space: nowrap;
+  @media (max-width: 500px) {
+    display: none;
+    
+  }
+`

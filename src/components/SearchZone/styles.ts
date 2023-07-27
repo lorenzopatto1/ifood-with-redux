@@ -2,7 +2,6 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 700px;
   height: 48px;
   display: flex;
   align-items: center;
@@ -12,7 +11,6 @@ export const Container = styled.div`
     height: 100%;
     width: 100%;
     input {
-      min-width: 320px;
       width: 100%;
       height: 100%;
       background-color: transparent;

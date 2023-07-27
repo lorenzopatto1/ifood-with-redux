@@ -27,6 +27,10 @@ export const ProductImage = styled.div`
   width: 170px;
   object-fit: contain;
 }
+
+  @media (max-width: 420px) {
+    display: none;
+  }
 `;
 
 export const ProductInfoContainer = styled.div`
@@ -38,6 +42,10 @@ export const ProductInfoContainer = styled.div`
     font-weight: 500;
     font-size: 1.2em;
     white-space: nowrap;
+
+    @media (max-width: 620px) {
+      font-size: 0.9em;
+    }
   }
   div > p {
     margin-top: 20px;

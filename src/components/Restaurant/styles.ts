@@ -43,11 +43,19 @@ export const MerchantContent = styled.div`
 
     line-height: 44px;
     color: #3e3e3e;
+    
+    @media (max-width: 750px) {
+      font-size: 1.1rem;
+      line-height: 20px;
+    }
   }
   #verify {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 450px) {
+      display: none;
+    }
   }
 `;
 export const VerifyIcon = styled.div`
@@ -57,6 +65,10 @@ export const VerifyIcon = styled.div`
   justify-content: center;
   margin-left: 24px;
   margin-right: 30px;
+
+  @media (max-width: 450px) {
+      display: none;
+    }
 
   > svg {
     position: absolute;
@@ -73,6 +85,10 @@ export const MerchantDetailsContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex: unset;
+
+  @media (max-width: 450px) {
+      display: none;
+    }
 `
 export const MoreButton = styled.button`
   font-size: 0.9em;
@@ -87,6 +103,10 @@ display: flex;
   margin-left: 20px;
   padding-left: 20px;
   font-size: 12px;
+
+  @media (max-width: 540px) {
+      display: none;
+    }
   `
 export const DollarSign = styled.div`
   width: 16px;

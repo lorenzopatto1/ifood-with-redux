@@ -18,11 +18,13 @@ export const CartProductItem = ({ product }: ProductProps) => {
     dispatch(decreaseItem(product.id))
   }
 
+  const productsTotalPrice = product.price * product.quantity!
+
   return (
     <ProductItem>
       <ProductInfos>
         <span>{product.name}</span>
-        <span>R$ {product.price * product.quantity!}</span>
+        <span>R$ {productsTotalPrice.toFixed(2)}</span>
         <ProductQuantity>
           <Minus size={18} weight="bold" fill="#ea1d2c" onClick={handleDecreaseItem} />
           <span>{product.quantity}</span>

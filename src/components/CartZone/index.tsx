@@ -31,7 +31,7 @@ export const CartZone = ({ cartIsOpen, toggleDrawer }: CartZoneProps) => {
       onClose={toggleDrawer}
       direction="right"
       overlayOpacity={0}
-      size={'36vw'}
+      size={'300px'}
     >
       <Container>
         <X onClick={toggleDrawer} size={17.5} weight="bold" fill="#ea1d2c" />
@@ -51,7 +51,7 @@ export const CartZone = ({ cartIsOpen, toggleDrawer }: CartZoneProps) => {
        <Content>
          <Total>
            <span>Total</span>
-           <span>R$ {productsTotalPrice}</span>
+           <span>R$ {productsTotalPrice.toFixed(2)}</span>
          </Total>
          <button>Escolher forma de pagamento</button>
        </Content>
