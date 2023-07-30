@@ -3,13 +3,22 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 23px 46px 23px 30px;
+  
+  @media (min-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    padding: 23px 46px 23px 30px;
+  }
 `;
 
 
 export const Banner = styled.div`
-  margin-top: 12px;
   width: 100%;
+  
+  @media (min-width: 960px) {
+    margin-top: 12px;
+    
+  }
 
   > img {
     width: 100%;
@@ -22,20 +31,24 @@ export const HeaderMerchant = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin: 30px 0 20px;
+  margin: 5% 0 4%;
   flex: 1 1;
 
   > img {
     width: 75px;
     height:75px;
     margin: 0 30px;
+
+    @media (max-width: 375px) {
+      width: 60px;
+      height: 60px;
+    }
   }
 `;
 export const MerchantContent = styled.div`
   display: flex;
   align-items: center;
   margin-left: 16px;
-  flex: 1 1;
 
   > h1 {
     font-weight: 400;
