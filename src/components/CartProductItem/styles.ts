@@ -9,8 +9,6 @@ export const ProductItem = styled.div`
   user-select: none;
 
   @media (max-width: 1000px) {
-    justify-content: center;
-
     img {
       display: none;
     }

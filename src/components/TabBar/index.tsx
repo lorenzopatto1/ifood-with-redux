@@ -1,7 +1,7 @@
 import { House, MagnifyingGlass, Scroll, User } from '@phosphor-icons/react'
 import { Container, Content } from './styles'
 
-export const MobileHeader = () => {
+export const TabBar = () => {
   return (
     <Container>
       <Content>

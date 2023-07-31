@@ -23,7 +23,10 @@ export const Banner = styled.div`
   > img {
     width: 100%;
     filter: brightness(0.8);
-    border-radius: 4px;
+    
+    @media (min-width: 960px) {
+      border-radius: 4px;    
+  }
   }
 `;
 export const HeaderMerchant = styled.div`

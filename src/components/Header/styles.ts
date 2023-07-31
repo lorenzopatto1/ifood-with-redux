@@ -15,6 +15,7 @@ export const Container = styled.header`
   border-bottom: 1px solid #dcdcdc;
   
   font-size: 0.842em;
+  
   @media (max-width: 959px) {
     display: none;
 }
