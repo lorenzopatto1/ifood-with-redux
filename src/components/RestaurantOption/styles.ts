@@ -29,6 +29,9 @@ export const RestaurantInfo = styled.div`
   display: flex;
   align-items: center;
   font-weight: 500;
+
+  p {font-weight: bolder;}
+  
 `;
 export const Logo = styled.div`
   img {

@@ -1,16 +1,13 @@
-import { Header } from './components/Header';
-import { TabBar } from './components/TabBar';
-import { Main } from './components/Main';
+import { Outlet } from "react-router-dom"
+import { Header } from "./components/Header"
+import { TabBar } from "./components/TabBar"
 
-function App() {
-  
+export const App = () => {
   return (
     <>
       <Header />
-      <Main />
+      <Outlet />
       <TabBar />
     </>
-  );
+  )
 }
-
-export default App;

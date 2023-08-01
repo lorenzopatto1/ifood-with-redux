@@ -9,15 +9,27 @@ export const Container = styled.div`
     flex-direction: column;
     padding: 23px 46px 23px 30px;
   }
-`;
+  `;
 
 
 export const Banner = styled.div`
+  position: relative;
   width: 100%;
   
   @media (min-width: 960px) {
     margin-top: 12px;
     
+  }
+
+  > a {
+    position: absolute;
+    z-index: 10000;
+    top: 20px;
+    left: 20px;
+ 
+    @media (min-width: 960px) {
+      display: none;
+    }
   }
 
   > img {
@@ -52,6 +64,7 @@ export const MerchantContent = styled.div`
   display: flex;
   align-items: center;
   margin-left: 16px;
+  flex: 1 1;
 
   > h1 {
     font-weight: 400;

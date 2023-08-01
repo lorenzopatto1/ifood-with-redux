@@ -24,6 +24,25 @@ export const Content = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+  }
+
+  p {
+    color: #717171;
+  }
+  
+  a {
+    color: #3f3e3e;
+  }
+  `;
+
+export const UserSettings = styled.button`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #717171;
+
+  svg {
+    color: #3f3e3e;
   }
 `;

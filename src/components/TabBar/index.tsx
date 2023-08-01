@@ -1,26 +1,33 @@
 import { House, MagnifyingGlass, Scroll, User } from '@phosphor-icons/react'
-import { Container, Content } from './styles'
+import { Container, Content, UserSettings } from './styles'
+import { Link } from 'react-router-dom'
 
 export const TabBar = () => {
   return (
     <Container>
       <Content>
-        <div>
-          <House size={22} />
-          Início
-        </div>
-        <div>
-          <MagnifyingGlass size={22}/>
-          Busca
+        <Link to="/">
+          <div>
+            <House size={22} />
+            <p>Início</p>
           </div>
+        </Link>
+        <Link to="/">
+          <div>
+            <MagnifyingGlass size={22}/>
+            <p>Busca</p>
+          </div>
+        </Link>
+        <Link to="/">
         <div>
           <Scroll size={22} />
-          Pedidos
+          <p>Pedidos</p>
           </div>
-        <div>
+        </Link>
+        <UserSettings>
         <User size={22} />
           Perfil
-        </div>
+        </UserSettings>
       </Content>
     </Container>
   )
