@@ -27,4 +27,9 @@ export default createGlobalStyle`
     list-style: none;
   }
 
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
 `

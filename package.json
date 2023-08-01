@@ -12,11 +12,15 @@
   "dependencies": {
     "@phosphor-icons/react": "^2.0.9",
     "add": "^2.0.6",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modern-drawer": "^1.2.0",
     "react-redux": "^8.0.5",
+    "react-router-dom": "^6.14.2",
     "redux": "^4.2.1",
+    "sort-by": "^1.2.0",
     "styled-components": "^6.0.0-rc.1",
     "yarn": "^1.22.19"
   },

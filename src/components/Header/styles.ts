@@ -43,6 +43,10 @@ export const NavBar = styled.nav`
 
   li {
     margin-left: 16px;
+
+    :hover {
+      color: #ea1d2c;
+    }
   }
 
   li:hover {

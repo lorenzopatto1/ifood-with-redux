@@ -11,16 +11,18 @@ import {
   DollarSign,
   Separation,
   Products
-} from "./styles.ts";
-import { Seal, Star } from "@phosphor-icons/react";
-import { SearchZone } from "../SearchZone/index.tsx";
-import { Product } from "../Product/index.tsx";
-import { restaurant } from "../../data/restaurant.ts";
+} from "./styles.js";
+import { CaretLeft, Seal, Star } from "@phosphor-icons/react";
+import { SearchZone } from "../../components/SearchZone/index.js";
+import { Product } from "../../components/Product/index.js";
+import { restaurant } from "../../data/restaurant.js";
+import { Link } from "react-router-dom";
 
 export const Restaurant = () => {
   return (
     <Container>
       <Banner>
+        <Link to="/"><CaretLeft fill="#fff" size={32} /></Link>
         <img src="https://www.ifood.com.br/static/images/merchant/banner/DEFAULT.png" />
       </Banner>
       <HeaderMerchant>

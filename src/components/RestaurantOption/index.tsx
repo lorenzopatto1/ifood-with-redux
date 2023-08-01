@@ -1,15 +1,14 @@
 import { restaurant } from "../../data/restaurant.ts";
+import { Link } from 'react-router-dom'
 
 import { RestaurantButton, Logo, RestaurantInfo, Container } from "./styles.ts";
 
-interface RestaurantOptionProps {
-  handleRestaurantClick: () => void;
-}
 
-export const RestaurantOption = ({handleRestaurantClick}: RestaurantOptionProps) => {
+export const RestaurantOption = () => {
     return (
       <Container>
-        <RestaurantButton onClick={handleRestaurantClick}>
+        <RestaurantButton>
+          <Link to={`restaurant/mcdonalds`}>
           <RestaurantInfo>
             <Logo>
               <img src={restaurant.imgURL} alt={restaurant.name} />
@@ -18,6 +17,7 @@ export const RestaurantOption = ({handleRestaurantClick}: RestaurantOptionProps)
               {restaurant.name} - {restaurant.location}
             </p>
           </RestaurantInfo>
+          </Link>
         </RestaurantButton>
       </Container>
     );
